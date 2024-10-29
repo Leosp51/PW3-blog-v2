@@ -4,6 +4,7 @@ import br.com.etechoracio.blog.dto.LoginRequestDTO;
 import br.com.etechoracio.blog.dto.LoginResponseDTO;
 import br.com.etechoracio.blog.dto.UsuarioAutenticadoDTO;
 import br.com.etechoracio.blog.enums.RoleEnum;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -13,7 +14,7 @@ public class LoginService {
 
 
     public LoginResponseDTO autenticar(LoginRequestDTO request) {
-        return LoginResponseDTO.builder().token(UUID.randomUUID().toString()).build();
+        return LoginResponseDTO.builder().token(UUID.randomUUID().toString()).build();//cria um token random
     }
 
 
